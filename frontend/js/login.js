@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         registerForm.classList.remove('hidden');
         loginForm.classList.add('hidden');
         tabRegister.classList.add('bg-gray-700', 'text-white');
-        showTab('register');
+        tabRegister.classList.remove('text-gray-400');
     });
 
     // Handle Login
@@ -71,7 +71,7 @@ async function handleRegister(e) {
         });
         
         alert('Registration successful! Please login.');
-        showTab('login');
+        tabLogin.click();
     } catch (error) {
         console.error('Register error:', error);
         alert('Registration failed.');

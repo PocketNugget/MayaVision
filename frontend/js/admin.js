@@ -105,22 +105,25 @@ async function loadUsers() {
             url: 'http://localhost:3000/api/participants',
             method: 'GET'
         });
-        const tbody = document.getElementById('usersTableBody');
-        tbody.innerHTML = users.map(u => `
-            <tr class="border-b border-gray-700">
-                <td class="p-3">${u.nombre}</td>
-                <td class="p-3">${u.correo}</td>
-                <td class="p-3">
-                    <span class="px-2 py-1 rounded text-xs ${u.conexionActiva ? 'bg-green-900 text-green-300' : 'bg-gray-700 text-gray-300'}">
-                        ${u.conexionActiva ? 'Online' : 'Offline'}
-                    </span>
-                </td>
-                <td class="p-3">
-                    <button onclick="deleteUser(${u.idParticipante})" class="text-red-400 hover:text-red-300">
-                        <i data-feather="trash-2" class="w-4 h-4"></i>
-                    </button>
-                </td>
-            </tr>
+        const list = document.getElementById('usersList');
+        list.innerHTML = users.map(u => `
+            <div class="bg-gray-800 p-3 rounded flex justify-between items-center border border-gray-700">
+                <div>
+                    <div class="font-bold text-white text-sm">${u.nombre}</div>
+                    <div class="text-xs text-gray-400">${u.correo}</div>
+                    <div class="text-xs text-primary-400 mt-0.5">
+                        ${u.tourType ? `<i data-feather="map-pin" class="w-3 h-3 inline mr-1"></i>${u.tourType}` : '<span class="text-gray-600">No Tour</span>'}
+                    </div>
+                    <div class="mt-1">
+                        <span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold ${u.conexionActiva ? 'bg-green-900 text-green-300' : 'bg-gray-700 text-gray-400'}">
+                            ${u.conexionActiva ? 'Online' : 'Offline'}
+                        </span>
+                    </div>
+                </div>
+                <button onclick="deleteUser(${u.idParticipante})" class="text-red-400 hover:text-red-300 p-1 hover:bg-red-900/20 rounded transition">
+                    <i data-feather="trash-2" class="w-4 h-4"></i>
+                </button>
+            </div>
         `).join('');
         feather.replace();
     } catch (error) {
