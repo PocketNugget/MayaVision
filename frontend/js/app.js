@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const loginBtn = document.querySelector('a[href="login.html"]');
         if (loginBtn) {
             loginBtn.textContent = 'Dashboard';
-            loginBtn.href = user.rol === 'admin' ? 'dashboard-admin.html' : 'dashboard-user.html';
+            loginBtn.href = user.role === 'Admin' ? 'dashboard-admin.html' : 'dashboard-user.html';
         }
     }
 });
