@@ -34,13 +34,13 @@
 ## Screenshots
 
 ### Landing Page
-![Landing Page](https://images.unsplash.com/photo-1518638151313-982d9120c80b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+![Landing Page](screenshots/landing-page.jpeg)
 
 ### User Dashboard
-![User Dashboard](https://images.unsplash.com/photo-1552074291-ad4dfd8b11c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+![User Dashboard](screenshots/user-dashboard.jpeg)
 
 ### Admin Dashboard
-![Admin Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+![Admin Dashboard](screenshots/admin-dashboard.jpeg)
 
 ---
 
